@@ -2,6 +2,8 @@
 
 EstateIQ es una plataforma de bienes raíces con enfoque en inteligencia artificial. Ofrece funcionalidades como ChatIQ, análisis de tendencias y categorías de propiedades. Prioriza la seguridad y privacidad del usuario, cumpliendo con regulaciones. Explore el mundo inmobiliario en línea con confianza en EstateIQ.
 
+En este proyecto podras acceder a los usuarios, casas, terrenos y departamentos.
+
 ## Tabla de contenido
 
 - [API RESTful con Node.js](#api-restful-con-nodejs)
@@ -22,13 +24,13 @@ Asegúrate de tener instalado y configurado Docker antes de comenzar.
 1. Clonar el repositorio en la máquina local:
    
    ```sh
-   git clone https://github.com/francerz/node-restful.git
+   git clone https://github.com/diegogodinezr/ProyectoEstateIQ.git
    ```
 
 2. Navegar al directorio del proyecto:
    
    ```sh
-   cd node-restful
+   cd proyecto
    ```
 
 3. Ejecutar el siguiente comando para iniciar los contenedores:
@@ -43,7 +45,7 @@ Asegúrate de tener instalado y configurado Docker antes de comenzar.
     > si no lo está, se devolverá un mensaje de error indicando que no se
     > encontró el docker daemon.
 
-4. La API estará disponible en `http://localhost:3100`.
+4. La API estará disponible en `http://localhost:3000`.
 
 ## Documentación detallada
 
