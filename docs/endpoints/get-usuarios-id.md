@@ -25,7 +25,7 @@ GET /usuarios/1
 - Código 500 Internal Server Error:
   ```json
   {
-    "errno": 500,
+    "error": 500,
     "error": "internal_error",
     "error_description": "Ocurrió un problema para procesar la solicitud"
   }
