@@ -1,32 +1,25 @@
-# Endpoint: `GET /carreras/{id}`
+# Endpoint: `GET /casas/{id}`
 
-Permite obtener información detallada sobre una carrera especificada mediante su identificador único.
+Obtiene la información especifica de una casa.
 
 ## Parámetros de URL
-- `{id}` (obligatorio): Identificador único de la carrera que se desea recuperar.
+- `{id}` (obligatorio): Identificador único de una casa que se desea recuperar.
 
 ## Ejemplo de Solicitud
 ```http
-GET /carreras/123
+GET /casas/1
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
-{
-  "id_tema": 123,
-  "nombre": "Nutrición",
-}
+{"id_casa":1,"titulo":"Casa 1","descripcion":"Descripción de la casa 1","precio":"250000.00","ubicacion":"Ubicación 1","habitaciones":3,"baños":2,"id_usuario":1}
 ```
 
 ## Respuestas de Errores Posibles
 - Código 404 Not Found:
 
   ```json
-  {
-    "errno": 404,
-    "error": "not_found",
-    "error_description": "No se encontró el tema."
-  }
+  {"error":"Not found"}
   ```
 
 - Código 500 Internal Server Error:
@@ -41,4 +34,4 @@ GET /carreras/123
 ## Notas Adicionales
 
 - Asegurate de incluir un ID válido en la solicitud para obtener la información
-  sobre una carrera en específico.
+  sobre una casa en específico.
