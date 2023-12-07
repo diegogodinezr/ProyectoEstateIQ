@@ -11,10 +11,24 @@ class UsuariosModel{
         return await db("usuarios").where('id_usuario',id);
       }
 
-      static async insertar(usuario){
-        let db=await connectToMysql();
-        return await db('usuarios').insert(usuario)
-      }
+      static async insertar(datos) {
+        let db = await connectToMysql();
+        const result = await db('usuarios').insert(datos).returning('id_usuario');
+        return result[0];
+    }
+
+    static async actualizar(id, campos) {
+        let db = await connectToMysql();
+        return await db('usuarios').where('id_usuario', id).update(campos);
+    }
+
+    static async reemplazar(id, newData) {
+        let db = await connectToMysql();
+        newData['id_usuario'] = id;
+        await db('usuarios').where('id_usuario', id).del();
+        await db.insert(newData).into('usuarios');
+        return id;
+    }
 }
 
 module.exports=UsuariosModel;
